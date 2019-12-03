@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		var source = new EventSource(window.location.href + '/data');
+		source.onmessage = function (evt) {
+		    var el = document.getElementById('sse');
+		    el.appendChild(document.createTextNode(evt.data));
+		    el.appendChild(document.createElement('br'));
+		};
+		
+		async function retreiveData() // GET
+		{		
+		  	const response = await fetch(window.location.href + '/data');
+		  	const tableData = await response.json(); //extract JSON from the http response
+		  	var parsed = tableData
+		  		//JSON.parse(tableData);
+			var table = document.getElementById('output_table');
+			var vals = '';
+			var i;
+			for (row of parsed)
+			{
+				var rowString = '<tr>';
+				for (val of row)
+				{
+					rowString += '<td>' + val + '</td>'
+				}
+				rowString += '</tr>'
+				vals += rowString;
+			}
+			table.innerHTML = vals;
+		}
+		window.onload = retreiveData;
+	</script>
+</head>
+<body>
+	<h3>Data</h3>
+	<table id="output_table"></table>
+</body>
+</html>
