@@ -47,17 +47,12 @@ public class AppController
 	 public StreamingResponseBody getData()
 	 {
 	
-		/*
-		 * String url = "jdbc:sqlserver://localhost\\SQLEXPRESS;" +
-		 * "databaseName=loveadmin-test;" + "username=readonlyuser;" +
-		 * "password=readonlypass";
-		 */
-		 
-		 String url =
-	                "jdbc:sqlserver://localhost\\SQLEXPRESS01:1433;"
-	                + "databaseName=loveadmin_test;"
-	                + "username=Alex;"
-	                + "password=alex01";
+		
+		  String url = "jdbc:sqlserver://localhost\\SQLEXPRESS;" +
+				  		"databaseName=loveadmin-test;" + 
+				  		"username=readonlyuser;" +
+			  			"password=readonlypass";
+		
 	
 		try 
 		{
