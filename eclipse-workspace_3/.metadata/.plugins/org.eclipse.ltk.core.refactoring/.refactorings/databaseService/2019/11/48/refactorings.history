@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;com.alex.app.Controller&apos; to &apos;AppController&apos;&#x0D;&#x0A;- Original project: &apos;databaseService&apos;&#x0D;&#x0A;- Original element: &apos;com.alex.app.Controller&apos;&#x0D;&#x0A;- Renamed element: &apos;com.alex.app.AppController&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Controller&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.alex.app{Controller.java[Controller" matchStrategy="1" name="AppController" qualified="false" references="true" similarDeclarations="false" stamp="1575040687305" textual="false" version="1.0"/>
-</session>
