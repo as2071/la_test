@@ -50,7 +50,7 @@ public class AppController
 		
 		  String url = "jdbc:sqlserver://localhost\\SQLEXPRESS;" +
 		  "databaseName=loveadmin-test;" + "username=readonlyuser;" +
-		  "password=readonlypass"; 
+		  "password=readonlypass;"; 
 		
 	
 		try 
